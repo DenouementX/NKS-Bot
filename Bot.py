@@ -202,5 +202,4 @@ async def on_message(message):
         sqgraph(str1)
         await client.send_file(message.channel, 'stats.png')
 
-client.run("NDM1ODg0ODQ0NDM4OTEzMDI0.Dbf8bw.pW-ZzrgheLGCJjfTS0YmCBUIbzA")
 client.login(process.env.BOT_TOKEN);
