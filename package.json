@@ -1,10 +1,10 @@
 {
-  "name": "Test",
-  "description": "Test",
-  "version": "0.0.0",
-  "main": "bot.js",
+  "name": "NKS-Bot",
+  "description": "A fortnite tracking bot.",
+  "version": "1.0.0",
+  "main": "bot.py",
   "scripts": {
-    "start": "node bot.js"
+    "start": "node bot.py"
   },
   "dependencies": {
     "discord.js": "11.1.0",
