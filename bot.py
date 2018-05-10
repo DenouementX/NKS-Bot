@@ -1,5 +1,5 @@
 # NKS-Bot: Battle Royale Stats Tracker
-# Version: 1.0.0
+# Version: 1.0.1
 
 import discord
 from discord.ext.commands import Bot
@@ -164,6 +164,7 @@ async def on_message(message):
     # Bot replies with message you want it to say
     if message.content.upper().startswith('!SAY'):
         args = message.content.split(" ")
+        await client.delete_message(message)
         await client.send_message(message.channel, "%s" % (" ".join(args[1:])))
 
     # Bot replies with seasonal stats
@@ -202,4 +203,11 @@ async def on_message(message):
         sqgraph(str1)
         await client.send_file(message.channel, 'stats.png')
 
-client.run(process.env.BOT_TOKEN)
+    # Bot responds if pubg is said
+    contents = message.content.split(" ")
+    chat_filter = ["PUBG", "TF2", "FORTRESS", "PUBG'S"]
+    for word in contents:
+        if word.upper() in chat_filter:
+            await client.send_file(message.channel, 'pubg.png')
+
+client.run("NDM1ODg0ODQ0NDM4OTEzMDI0.Dbf8bw.pW-ZzrgheLGCJjfTS0YmCBUIbzA")
