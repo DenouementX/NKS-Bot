@@ -17,7 +17,7 @@ import matplotlib.pyplot as plt
 def seasonStats(name):
     # finds seasonal stats including wins, matches played, kd
     URL = 'https://api.fortnitetracker.com/v1/profile/pc/' + name
-    headers = {'TRN-Api-Key' : 'ebfd96da-b6d3-4f00-9813-181297be2d49'}
+    headers = {'TRN-Api-Key' : 'KEY_NAME'}
     res = requests.get(URL, headers=headers)
 
     KDSolo = res.json()['stats']['curr_p2']['kd']['value']
@@ -29,7 +29,7 @@ def seasonStats(name):
 def lifeTimeStats(name):
     # finds lifetime stats including wins, matches played, kd
     URL = 'https://api.fortnitetracker.com/v1/profile/pc/' + name
-    headers = {'TRN-Api-Key' : 'ebfd96da-b6d3-4f00-9813-181297be2d49'}
+    headers = {'TRN-Api-Key' : 'KEY_NAME'}
     res = requests.get(URL, headers=headers)
     lifeStats = res.json()['lifeTimeStats']
     
@@ -53,7 +53,7 @@ def lifeTimeStats(name):
 def sgraph(name):
     # current season solo graph
     URL = 'https://api.fortnitetracker.com/v1/profile/pc/' + name
-    headers = {'TRN-Api-Key' : 'ebfd96da-b6d3-4f00-9813-181297be2d49'}
+    headers = {'TRN-Api-Key' : 'KEY_NAME'}
     res = requests.get(URL, headers=headers)
 
     T1 = res.json()['stats']['curr_p2']['top1']['value']
@@ -80,7 +80,7 @@ def sgraph(name):
 def dgraph(name):
     # current season duo graph
     URL = 'https://api.fortnitetracker.com/v1/profile/pc/' + name
-    headers = {'TRN-Api-Key' : 'ebfd96da-b6d3-4f00-9813-181297be2d49'}
+    headers = {'TRN-Api-Key' : 'KEY_NAME'}
     res = requests.get(URL, headers=headers)
 
     T1 = res.json()['stats']['curr_p10']['top1']['value']
@@ -107,7 +107,7 @@ def dgraph(name):
 def sqgraph(name):
     # current season squad graph
     URL = 'https://api.fortnitetracker.com/v1/profile/pc/' + name
-    headers = {'TRN-Api-Key' : 'ebfd96da-b6d3-4f00-9813-181297be2d49'}
+    headers = {'TRN-Api-Key' : 'KEY_NAME'}
     res = requests.get(URL, headers=headers)
 
     T1 = res.json()['stats']['curr_p9']['top1']['value']
