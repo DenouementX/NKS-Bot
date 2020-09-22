@@ -1,2 +1,2 @@
 # NKS-Bot
-Discord bot for scraping Fortnite player data and visualizing that data with matplotlib.
+A discord bot that displays Fortnite player data with nice visual graphs.
